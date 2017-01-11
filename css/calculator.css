@@ -124,8 +124,8 @@
 
 @media (max-width: 600px), (max-width: 360px) {
 	.calculator {
-		width: 90%;
-		font-weight: 300;
+		width: 100%;
+		min-width: unset;
 	}
 
 	.calculator button {
