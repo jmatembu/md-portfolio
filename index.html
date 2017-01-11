@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Joseph Matembu</title>
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/calculator.css">
+  <link rel="stylesheet" href="css/card.css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:300|Lato:300" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    
+    <input type="checkbox" id="sidebar-toggle" class="show-sidebar">
+
+    <div class="menu-toggle">
+      <label for="sidebar-toggle">
+        <span>Menu</span>
+      </label>
+    </div>
+
+    <aside id="theSidebar" class="sidebar">     
+
+      <form class="search-form">
+        <input type="search" id="search">
+        <label for="search">Search</label>
+        <a href="#search-modal"><i class="fa fa-search fa-lg"></i></a>
+      </form>
+      
+      <i class="fa fa-user fa-3x"></i>
+      <h1><span>Joseph</span> Matembu</h1>
+      <p>Studying front-end development at the prestigious <a href="https://bovacademy.com" target="_blank">Bov Academy</a></p>
+      <div class="divider"></div>
+      <div class="social">
+        <h2>Connect with Me</h2>
+        <a href="http://twitter.com/jmatembu" target="_blank" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="http://facebook.com/josesmat" target="_blank" title="Facebook"><i class="fa fa-facebook fa-2x"></i></a>
+        <a href="http://github.com/jmatembu" target="_blank" title="Github"><i class="fa fa-github fa-2x"></i></a>
+      </div>
+      
+      <div id="search-modal" class="modal-overlay">
+        <div class="modal">
+          <a href="#close-modal" class="close-modal">
+            <span></span>
+          </a>
+          <p>Search Temporarily Disabled</p>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <input type="checkbox" name="content" id="about-input">
+      <section class="content">
+        <div class="content-item" id="about">
+          <h2 class="about-title">About Me</h2>
+          <picture class="full-profile-picture">
+            <source srcset="images/joseph_xs.jpg" type="image/jpg" media="(max-width: 360px) 100%">
+            <source srcset="images/joseph_sm.jpg" type="image/jpg" media="(max-width: 600px) 100%">
+            <img src="images/joseph.jpg" title="Profile Image">
+          </picture>
+          
+          <div class="about-description">
+            <p>
+              <span>Hi, I am Joseph.</span>
+              I am an aspiring frontend developer from Uganda. I care about beautifully crafted interfaces that improve user experience. After graduating from <a href="https://bovacademy.com">Bov Academy</a>, I would love to contribute my skills to non-profit and open-source projects that improve humanity.
+            </p>
+          </div>
+        </div>
+        <label class="close-button close-button-show" for="about-input">
+          <i class="fa fa-close"></i><span>Close</span>
+        </label>
+      </section>
+
+      <input type="checkbox" name="content" id="projects-input">
+      <section class="content">
+
+        <div class="content-item" id="projects">
+          <header>
+            <h2>Projects</h2>
+          </header>
+
+          <div class="tab-component">
+
+            <div class="tab">
+
+              <input type="radio" name="tab-group-1" id="show-real-calculator" checked>
+              <label for="show-real-calculator">Real Calculator <i class="fa fa-arrow-right fa-arrow-down"></i></label>
+
+              <div class="tab-content">
+                
+                <div class="tab-content-body">                  
+
+                  <div class="slides">
+                      
+                    <input type="radio" id="calc-slide-1" name="show-calc-slide" checked>
+                    <div class="slide">
+                      <h3 class="slide-title">Screenshot 1</h3>
+                      <img src="images/demos/calculator1.png">
+                    </div>
+
+                    <input type="radio" id="calc-slide-2" name="show-calc-slide">
+                    <div class="slide">
+                      <h3 class="slide-title">Screenshot 2</h3>
+                      <img src="images/demos/calculator2.png">
+                    </div>
+
+                    <input type="radio" id="calc-slide-3" name="show-calc-slide">
+                    <div class="slide">
+                      <h3 class="slide-title">How the Calculator works</h3>
+                      <img src="images/demos/calc.gif">
+                    </div>
+
+                    <input type="radio" id="calc-slide-4" name="show-calc-slide">
+                    <div class="slide">
+                      <h3 class="slide-title">Try it out</h3>
+                      <div class="calculator">
+                        <div class="calculatorOutput">
+                          <input type="text" id="screen" placeholder="0" autofocus>
+                        </div>
+                        <ul class="operators topOperators">
+                          <li>
+                            <button id="clearScreen">C</button>
+                            <button class="num" value="/">/</button>
+                            <button class="num" value="*">x</button>
+                            <button id="delete">DEL</button>
+                          </li>
+                        </ul>
+                        <ul class="numberButtons">
+                          <li>
+                            <button class="num" value="7">7</button>
+                            <button class="num" value="8">8</button>
+                            <button class="num" value="9">9</button>
+                          </li>
+                          <li>
+                            <button class="num" value="4">4</button>
+                            <button class="num" value="5">5</button>
+                            <button class="num" value="6">6</button>
+                          </li>
+                          <li>
+                            <button class="num" value="1">1</button>
+                            <button class="num" value="2">2</button>
+                            <button class="num" value="3">3</button>
+                          </li>
+                          <li>
+                            <button class="num" value=".">.</button>
+                            <button class="num" value="0">0</button>
+                            <button disabled>&nbsp;</button>
+                          </li>
+                        </ul>
+                        <ul class="operators rightOperators">
+                          <li>
+                            <button class="num" value="-">-</button>
+                            <button class="num" value="+">+</button>
+                            <button id="equals">=</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="slide-indicators">
+                      <label for="calc-slide-1"></label>
+                      <label for="calc-slide-2"></label>
+                      <label for="calc-slide-3"></label>
+                      <label for="calc-slide-4"></label>
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="tab-content-footer">
+                  <h4><span>Technologies:</span> HTML, CSS, Vanilla JavaScript</h4>
+                  <p>HTML and CSS were used to structure and style the calculator. JavaScript was solely used to make the calculator do its simple Math.</p>
+                  <a href="https://jmatembu.github.io/projects/basic-calculator/index.html">Demo</a><a href="#"><i class="fa fa-github fa-lg"></i> Source Code on Github</a>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="tab">
+
+              <input type="radio" name="tab-group-1" id="show-forms"> 
+              <label for="show-forms">Forms <i class="fa fa-arrow-right fa-arrow-down"></i></label>
+              
+              <div class="tab-content">
+
+                <div class="tab-content-body">
+
+                  <div class="slides">
+                    
+                    <input type="radio" class="show-form-slide" id="form-slide-1" name="show-form-slide" checked>
+                    <div class="slide">
+                      <h3 class="slide-title">Login Form</h3>
+                      <img src="images/demos/login1.png">
+                    </div>
+
+                    <input type="radio" class="show-form-slide" id="form-slide-2" name="show-form-slide">
+                    <div class="slide">
+                      <h3 class="slide-title">Login Form with Validation</h3>
+                      <img src="images/demos/login2.png">
+                    </div>
+
+                    <input type="radio" class="show-form-slide" id="form-slide-3" name="show-form-slide">
+                    <div class="slide">
+                      <h3 class="slide-title">Credit/Debit Visa Form</h3>
+                      <img src="images/demos/credit-card.png">
+                    </div>
+
+                    <input type="radio" class="show-form-slide" id="form-slide-4" name="show-form-slide">
+                    <div class="slide">
+                      <h3 class="slide-title">A working Login Form with Validation</h3>
+                      <div class="login">
+                        <div class="login-header">
+                          <h1>Login</h1>
+                          <span><a href="signup.html">Create an Account</a></span>
+                        </div>
+                        <form class="login-form" id="login" novalidate>
+                          
+                          <label for="email">Email: *</label>
+                          <span class="error"></span>
+                          <input type="email" class="text-input" name="email" id="email" autofocus>
+                          <label for="password">Password: *</label>
+                          <span><a href="#">Forgot?</a></span>
+                          <span class="error"></span>
+                          <input type="password" class="text-input" name="password" id="password">
+                          <button type="submit" class="button button-lg">Login</button>
+                        </form>
+                      </div>
+                    </div>
+                    
+                    <div class="slide-indicators">
+                      <label for="form-slide-1"></label>
+                      <label for="form-slide-2"></label>
+                      <label for="form-slide-3"></label>
+                      <label for="form-slide-4"></label>
+                    </div>
+                  </div>
+                  
+
+                </div>
+                <div class="tab-content-footer">
+                  <h4><span>Technologies:</span> HTML, CSS, Vanilla JavaScript</h4>
+                  <p>HTML and CSS were used to structure and style the forms. JavaScript was used to provide form validation.</p>
+                  <a href="https://jmatembu.github.io/projects/web-forms/index.html">Demo</a><a href="#"><i class="fa fa-github fa-lg"></i> Source Code on Github</a>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="tab">
+
+              <input type="radio" name="tab-group-1" id="show-shopping-cart">
+              <label for="show-shopping-cart">Shopping Cart <i class="fa fa-arrow-right fa-arrow-down"></i></label>
+          
+              <div class="tab-content">
+                
+                <div class="tab-content-body">
+
+                  <div class="slides">
+                    
+                    <input type="radio" id="slide-cart-1" name="show-cart-slide" checked>
+                    <div class="slide">
+                      <h3 class="slide-title">Screenshot 1</h3>
+                      <img src="images/demos/product-listing-1.png">
+                    </div>
+
+                    <input type="radio" id="slide-cart-2" name="show-cart-slide">
+                    <div class="slide">
+                      <h3 class="slide-title">Screenshot 2</h3>
+                      <img src="images/demos/product-listing-2.png">
+                    </div>
+
+                    <input type="radio" id="slide-cart-3" name="show-cart-slide">
+                    <div class="slide">
+                      <h3 class="slide-title">Screenshot 3</h3>
+                      <img src="images/demos/product-listing-3.png">
+
+                    </div>
+
+                    <input type="radio" id="slide-cart-4" name="show-cart-slide">
+                    <div class="slide">
+                      <h3 class="slide-title">Basic working Shopping Cart</h3>
+                      <section class="products">
+                        <div class="container">
+                          <header class="box-header">
+                            <div class="box-title">
+                              <h1>Products</h1>
+                            </div>
+                            <div class="box-tools left">
+                              <button id="toggleShoppingCart" class="button">Show Cart</button>
+                            </div>
+                          </header>
+                          <ul class="store">
+                            <li>
+                              <div class="product" id="p101">
+                                <span class="new">New</span>
+                                <img src="images/product-1.jpg">
+                                <div class="product-details">
+                                  <h3>Product 101</h3>
+                                  <a href="#" class="add-to-cart" id="product_p101"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="price">$29.99</span>
+                                  <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>  
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="product"  id="p102">
+                                <img src="images/product-1.jpg">
+                                <div class="product-details">
+                                  <h3>Product 102</h3>
+                                  <a href="#" class="add-to-cart" id="product_p102"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="price">$19.99</span>
+                                  <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="product" id="p103">
+                                <img src="images/product-1.jpg">
+                                <span class="sale">10% Off</span>
+                                <div class="product-details">
+                                  <h3>Product 103</h3>
+                                  <a href="#" class="add-to-cart" id="product_p103"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="old-price">$14.99</span>
+                                  <span class="price">$9.99</span>
+                                  <p>Excepteur sint occaecat cupidatat non proident.</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="product" id="p104">
+                                <img src="images/product-1.jpg">
+                                <div class="product-details">
+                                  <h3>Product 104</h3>
+                                  <a href="#" class="add-to-cart" id="product_p104"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="price">$29.99</span>
+                                  <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="product" id="p105">
+                                <img src="images/product-1.jpg">
+                                <span class="sale">30% Off</span>
+                                <div class="product-details">
+                                  <h3>Product 105</h3>
+                                  <a href="#" class="add-to-cart" id="product_p105"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="old-price">$26</span>
+                                  <span class="price">$20</span>
+                                  
+                                  <p>Excepteur sint occaecat cupidatat non proident.</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="product" id="p106">
+                                <img src="images/product-1.jpg">
+                                <span class="sale">20% Off</span>
+                                <div class="product-details">
+                                  <h3>Product 106</h3>
+                                  <a href="#" class="add-to-cart" id="product_p106"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="old-price">$35.99</span>
+                                  <span class="price">$24.99</span>
+                                  <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="product" id="p107">
+                                <img src="images/product-1.jpg">
+                                <div class="product-details">
+                                  <h3>Product 107</h3>
+                                  <a href="#" class="add-to-cart" id="product_p107"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="price">$22</span>
+                                  <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="product" id="p108">
+                                <img src="images/product-1.jpg">
+                                <div class="product-details">
+                                  <h3>Product 108</h3>
+                                  <a href="#" class="add-to-cart" id="product_p108"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="price">$18</span>
+                                  <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="product" id="p109">
+                                <img src="images/product-1.jpg">
+                                <div class="product-details">
+                                  <h3>Product 109</h3>
+                                  <a href="#" class="add-to-cart" id="product_p109"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="price">$19</span>
+                                  <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="product" id="p110">
+                                <img src="images/product-1.jpg">
+                                <div class="product-details">
+                                  <h3>Product 110</h3>
+                                  <a href="#" class="add-to-cart" id="product_p110"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="price">$12</span>
+                                  <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="product" id="p111">
+                                <img src="images/product-1.jpg">
+                                <div class="product-details">
+                                  <h3>Product 111</h3>
+                                  <a href="#" class="add-to-cart"  id="product_p111"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="price">$26</span>
+                                  <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="product" id="p112">
+                                <img src="images/product-1.jpg">
+                                <div class="product-details">
+                                  <h3>Product 112</h3>
+                                  <a href="#" class="add-to-cart"  id="product_p112"><i class="ti-shopping-cart"></i> Add to Cart</a>
+                                  <span class="price">$12</span>
+                                  <p>Duis aute irure dolor in reprehenderit in voluptate.</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </section>
+                      
+                      <section class="cart" id="shoppingCart">
+                        <div class="container">
+                          <h1>Shopping Cart</h1>
+                          <div class="cart-details">
+                            <div class="cart-products">
+                              <span>You have <span id="totalCartItemsLabel"></span> products in your shopping cart</span>
+                              <ul class="cartProductList">
+                                <li class="cartProductListHeader">
+                                  <ul>
+                                    <li class="cartProductName">Product</li>
+                                    <li class="cartProductQuantity">Quantity</li>
+                                    <li class="cartProductPrice">Price</li>
+                                    <li class="cartProductAction">&nbsp;</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                              <div class="row">
+                                <div class="col4">
+                                  <button title="Continue shopping" class="btn">Continue Shopping</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cart-order">
+                              <div class="cart-coupon">
+                                <h3>I have a coupon</h3>
+                                <input type="text" placeholder="coupon" id="couponInput"></input>
+                                <button title="Add coupon to reduce on total amount" id="addCoupon"><i class="ti-plus"></i> Add Coupon</button>
+                              </div>
+                              <div class="cart-summary">
+                                <h3>Order Summary</h3>
+                                <div class="row order-total">
+                                  <div class="col9">
+                                    <span>Order Total</span>
+                                  </div>
+                                  <div class="col3">
+                                    $<span id="cartTotal">0</span>
+                                  </div>
+                                </div>
+                                <button title="Proceed to Checkout">Proceed to Checkout <i class="ti-angle-right"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+
+                    <div class="slide-indicators">
+                      <label for="slide-cart-1"></label>
+                      <label for="slide-cart-2"></label>
+                      <label for="slide-cart-3"></label>
+                      <label for="slide-cart-4"></label>
+                    </div> 
+
+                  </div> 
+
+                </div>
+                <div class="tab-content-footer">
+                  <h4><span>Technologies:</span> HTML, CSS, Vanilla JavaScript</h4>
+                  <p>HTML and CSS were used to structure and style the product listing and cart functionality. JavaScript was used to add basic shopping cart functionality.</p>
+                  <a href="https://jmatembu.github.io/projects/product-listing/index.html">Demo</a><a href="#"><i class="fa fa-github fa-lg"></i> Source Code on Github</a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="tab">
+
+              <input type="radio" name="tab-group-1" id="show-accordion">
+              <label for="show-accordion">Accordion <i class="fa fa-arrow-right fa-arrow-down"></i></label>
+          
+              <div class="tab-content">
+                
+                <div class="tab-content-body">
+
+                  <div class="slides">
+                    
+                    <input type="radio" id="slide-accordion-1" name="show-accordion-slide" checked>
+                    <div class="slide">
+                      <h3 class="slide-title">Screenshot 1</h3>
+                      <img src="images/demos/accordion-1.png">
+                    </div>
+
+                    <input type="radio" id="slide-accordion-2" name="show-accordion-slide">
+                    <div class="slide">
+                      <h3 class="slide-title">Screenshot 2</h3>
+                      <img src="images/demos/accordion-2.png">
+                    </div>
+
+                    <input type="radio" id="slide-accordion-3" name="show-accordion-slide">
+                    <div class="slide">
+                      <h3 class="slide-title">A working Accordion</h3>
+                      <ul class="accordion">
+                        <li>
+                          <input type="checkbox" name ="restaurant-menu" id="appetizers" checked>
+                          <label for="appetizers">Appetizers</label>
+                          <div class="accordion-content">
+                            <h5>Check out tasty apps!</h5>
+                            <h6>Happy hour menu - half off!!</h6>
+                            <ul>
+                              <li>Chicken Wings (6) - 5.99$</li>
+                              <li>Calamari - 7.99$</li>
+                              <li>Garlic breaded pickles - 4.59$</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <input type="checkbox" name ="restaurant-menu" id="entrees">
+                          <label for="entrees">Entrees</label>
+                          <div class="accordion-content">
+                            <h5>Choose from a wide range of pastas, combos and signature dishes</h5>
+                            <h6>Pastas</h6>
+                            <ul>
+                              <li>Chicken Picatta - 14.99$</li>
+                              <li>Chiken Pollo - 12.99$</li>
+                              <li>Lasagna (Chicken/beef) - 10.99$</li>
+                            </ul>
+                            <h6>Combos</h6>
+                            <ul>
+                              <li>Italian Sausage & Beef Combo - 15.99$</li>
+                              <li>Mac n Cheese with Chicken Tenders - 8.99$</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <input type="checkbox" name ="restaurant-menu" id="desserts">
+                          <label for="desserts">Desserts</label>
+                          <div class="accordion-content">
+                            <h5>New Summer specials!!</h5>
+                            <h6>Shakes and Ice Creams</h6>
+                            <ul>
+                              <li>Turtle Caramel Shake - 6.99$</li>
+                              <li>Chocolate Brownie Bite - 4.99$</li>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <li>
+                          <input type="checkbox" name="restaurant-menu" id="soups-and-salads">
+                          <label for="soups-and-salads">Soups & Salads</label>
+
+                          <div class="accordion-content">
+                            <h5>New Summer specials!!</h5>
+                            <h6>Shakes and Ice Creams</h6>
+                            <ul>
+                              <li>Turtle Caramel Shake - 6.99$</li>
+                              <li>Chocolate Brownie Bite - 4.99$</li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="slide-indicators">
+                      <label for="slide-accordion-1"></label>
+                      <label for="slide-accordion-2"></label>
+                      <label for="slide-accordion-3"></label>
+                    </div> 
+
+                  </div>
+
+                </div> 
+                
+                <div class="tab-content-footer">
+                  <h4><span>Technologies:</span> HTML, CSS</h4>
+                  <p>HTML and CSS were used to structure and style the accordion. A checkbox hack was used to toggle the accordion panels.</p>
+                  <a href="#"><i class="fa fa-eye"></i>View on Codepen</a>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="tab">
+
+              <input type="radio" name="tab-group-1" id="show-image-gallery">
+              <label for="show-image-gallery">Image Gallery <i class="fa fa-arrow-right fa-arrow-down"></i></label>
+          
+              <div class="tab-content">
+                
+                <div class="tab-content-body">
+
+                    <div class="slides">
+                      
+                      <input type="radio" id="slide-gallery-1" name="show-gallery-slide" checked>
+                      <div class="slide">
+                        <h3 class="slide-title">Screenshot 1</h3>
+                        <img src="images/demos/gallery1.png">
+                      </div>
+
+                      <input type="radio" id="slide-gallery-2" name="show-gallery-slide">
+                      <div class="slide">
+                        <h3 class="slide-title">Screenshot 2</h3>
+                        <img src="images/demos/gallery2.png">
+                      </div>
+
+                      <input type="radio" id="slide-gallery-3" name="show-gallery-slide">
+                      <div class="slide">
+                        <h3 class="slide-title">Screenshot 3</h3>
+                        <img src="images/demos/gallery3.png">
+                      </div>
+
+                      <input type="radio" id="slide-gallery-4" name="show-gallery-slide">
+                      <div class="slide">
+                        <h3 class="slide-title">Try it Out</h3>
+                        <div class="gallery">
+                          <!-- Thumbnails at the top -->
+                          <div class="thumbnails">
+                            <label for="thumbnail1">
+                              <img src="images/demos/gallery/1-thumbnail.jpg" class="thumbnail" alt="">
+                            </label>
+                            <label for="thumbnail2">
+                              <img src="images/demos/gallery/2-thumbnail.jpg" class="thumbnail" alt="">
+                            </label>
+                            <label for="thumbnail3">
+                              <img src="images/demos/gallery/3-thumbnail.jpg" class="thumbnail" alt="">
+                            </label>
+                            <label for="thumbnail4">
+                              <img src="images/demos/gallery/4-thumbnail.jpg" class="thumbnail" alt="">
+                            </label>
+                            <label for="thumbnail5">
+                              <img src="images/demos/gallery/5-thumbnail.jpg" class="thumbnail" alt="">
+                            </label>
+                          </div>
+
+                          <!-- HTML Code for Images linked to the thumbnails -->
+                          <input type="radio" id="thumbnail1" name="photo-toggle" checked>
+                          <img src="images/demos/gallery/1.jpg" class="photo" alt="" id="thumbnail1">
+                          
+                          <input type="radio" id="thumbnail2" name="photo-toggle">
+                          <img src="images/demos/gallery/2.jpg" class="photo" alt="" id="thumbnail2">
+
+                          <input type="radio" id="thumbnail3" name="photo-toggle">
+                          <img src="images/demos/gallery/3.jpg" class="photo" alt="" id="thumbnail3">
+
+                          <input type="radio" id="thumbnail4" name="photo-toggle">
+                          <img src="images/demos/gallery/4.jpg" class="photo" alt="" id="thumbnail4">
+
+                          <input type="radio" id="thumbnail5" name="photo-toggle">
+                          <img src="images/demos/gallery/5.jpg" class="photo" alt="" id="thumbnail5">
+
+                        </div>
+                      </div>
+
+                      <div class="slide-indicators">
+                        <label for="slide-gallery-1"></label>
+                        <label for="slide-gallery-2"></label>
+                        <label for="slide-gallery-3"></label>
+                        <label for="slide-gallery-4"></label>
+                      </div>
+
+                    </div>
+                  
+                </div>
+
+                <div class="tab-content-footer">
+                  <h4><span>Technologies:</span> HTML, CSS</h4>
+                  <p>HTML and CSS were used to structure and style the image gallery. A radio input element hack was used to toggle image views.</p>
+                  <a href="#"><i class="fa fa-eye"></i>View on Codepen</a>
+                </div>
+               
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <label class="close-button close-button-show" for="projects-input">
+          <i class="fa fa-close"></i><span> Close</span>
+        </label>
+      </section>
+
+      <input type="checkbox" name="content" id="skills-input">
+      <section class="content">
+
+        <div class="content-item" id="skills">
+          <h2>Skills</h2>
+
+          <div class="skills">
+
+            <div class="skillsBar">
+              <div class="frontendSkills">
+                <span>70%</span>
+              </div>
+              <div class="backendSkills">
+                <span>30%</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col6 col12-sm frontendGraphContainer">
+                <h3>Frontend Development</h3>
+                <div class="graphWrapper">
+                  <ul class="yAxis">
+                    <li>Expert</li>
+                    <li>Proficient</li>
+                    <li>Competent</li>
+                    <li>Learning</li>
+                  </ul>
+                  <ul class="barGraph">
+                    <li class="bar" id="fb1">
+                      <span>Competent: I just learned JavaScript a couple of month ago.</span>
+                    </li>
+                    <li class="bar" id="fb2">
+                      <span>Proficient: With 3 years experience.</span>
+                    </li>
+                    <li class="bar" id="fb3"><span>Learning: I can only set up a React Project.</span></li>
+                    <li class="bar" id="fb4">
+                      <span>Learning: I can only set up an Angular Project.</span>
+                    </li>
+                    <li class="bar" id="fb5">
+                      <span>Learning: Basic DOM manipulation and Ajax calls.</span>
+                    </li>
+                  </ul>
+                  <ul class="xAxis">
+                    <li>JavaScript</li>
+                    <li>HTML/CSS</li>
+                    <li>ReactJS</li>
+                    <li>AngularJS</li>
+                    <li>jQuery</li>
+                  </ul>
+                </div>  
+              </div>
+              <div class="col6 col12-sm backendGraphContainer">
+                <h3>Backend Development</h3>
+                <div class="graphWrapper">
+                  <ul class="yAxis">
+                    <li>Expert</li>
+                    <li>Proficient</li>
+                    <li>Competent</li>
+                    <li>Learning</li>
+                  </ul>
+                  <ul class="barGraph">
+                    <li class="bar" id="bb1"></li>
+                    <li class="bar" id="bb2"></li>
+                    <li class="bar" id="bb3"></li>
+                    <li class="bar" id="bb4"></li>
+                    <li class="bar" id="bb5"></li>
+                  </ul>
+                  <ul class="xAxis">
+                    <li>JavaScript</li>
+                    <li>HTML/CSS</li>
+                    <li>ReactJS</li>
+                    <li>AngularJS</li>
+                    <li>jQuery</li>
+                  </ul>
+                </div>  
+              </div>
+            </div>
+            <div class="row">
+              <div class="col6 col12-sm otherGraphContainer center">
+                <h3>Other Skills</h3>
+                <div class="graphWrapper">
+                  <ul class="yAxis">
+                    <li>Expert</li>
+                    <li>Proficient</li>
+                    <li>Competent</li>
+                    <li>Learning</li>
+                  </ul>
+                  <ul class="barGraph">
+                    <li class="bar" id="ob1"></li>
+                    <li class="bar" id="ob2"></li>
+                    <li class="bar" id="ob3"></li>
+                    <li class="bar" id="ob4"></li>
+                    <li class="bar" id="ob5"></li>
+                  </ul>
+                  <ul class="xAxis">
+                    <li>Written Communication</li>
+                    <li>Problem Solving</li>
+                    <li>Project Management</li>
+                    <li>Research</li>
+                    <li>Public Speaking</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <label class="close-button close-button-show" for="skills-input">
+          <i class="fa fa-close"></i><span>Close</span>
+        </label>
+      </section>
+      
+      <input type="checkbox" name="content" id="contact-input">
+      <section class="content">
+        <div class="content-item" id="contact">
+          <h2>Contact Me</h2>
+          <div class="contact">
+            <form class="contact-form" id="contact" novalidate>
+
+              <div class="col6 col12-sm">
+                <label for="contact-email">Email: *</label>
+                <span class="error"></span>
+                <input type="email" class="text-input" name="contact_email" id="contact-email" autofocus>
+                </div>
+              <div class="col6 col12-sm">
+                <label for="contact-name">Name: *</label>
+                <span class="error"></span>
+                <input type="email" class="text-input" name="contact_name" id="contact-name">
+              </div>
+
+              <div class="col12">
+                <label for="contact-message">Message *</label>
+                <span class="error"></span>
+                <textarea class="text-input" name="contact_message" id="contact-message"></textarea>
+              </div>
+
+              <button type="submit" class="button button-lg"><i class="fa fa-send"></i> Send Message</button>
+            </form>
+          </div>
+        </div>
+        <label class="close-button close-button-show" for="contact-input">
+          <i class="fa fa-close"></i><span>Close</span>
+        </label>
+      </section>
+      <section class="grid">
+        <label class="grid-item" for="about-input">
+          <h2 class="title title-preview"><i class="fa fa-home fa-2x"></i></h2>
+          <div class="meta meta-preview">
+            <span class="meta-link">About</span>
+            <div class="loader"></div>
+            <span class="meta-description">01. About me description here</span>
+          </div>
+        </label>
+        <label class="grid-item" for="projects-input">
+          <h2 class="title title-preview"><i class="fa fa-cog fa-2x"></i></h2>
+          <div class="meta meta-preview">
+            <span class="meta-link">Projects</span>
+            <div class="loader"></div>
+            <span class="meta-description">02. Projects description here</span>
+          </div>
+        </label>
+        <label class="grid-item" for="skills-input">
+          <h2 class="title title-preview"><i class="fa fa-star fa-2x"></i></h2>
+          <div class="meta meta-preview">
+            <span class="meta-link">Skills</span>
+            <div class="loader"></div>
+            <span class="meta-description">03. Skills description here</span>
+          </div>
+        </label>
+        <label class="grid-item" for="contact-input">
+          <h2 class="title title-preview"><i class="fa fa-envelope fa-2x"></i></h2>
+          <div class="meta meta-preview">
+            <span class="meta-link">Contact</span>
+            <div class="loader"></div>
+            <span class="meta-description">04. Contact details here</span>
+          </div>
+        </label>
+      </section>
+
+      
+       
+    </main>
+  </div>
+  <script src="js/validator.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
