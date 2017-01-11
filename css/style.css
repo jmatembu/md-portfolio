@@ -2108,9 +2108,6 @@ li.cartProductPrice {
   }
 
   /* Slides */
-  .slides {
-    overflow-y: hidden;
-  }
   .slide-indicators {
     bottom: 165px;
   }
