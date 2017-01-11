@@ -1521,6 +1521,7 @@ input[name="content"] ~ .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  width: 100%;
 }
 .products li {
   padding: 1.5%;
@@ -2108,9 +2109,6 @@ li.cartProductPrice {
   }
 
   /* Slides */
-  .slides {
-    overflow-y: hidden;
-  }
   .slide-indicators {
     bottom: 165px;
   }
@@ -2237,6 +2235,10 @@ li.cartProductPrice {
   }
   
   .products li {
+    width: 100%;
+  }
+  .cart-products .col4 {
+    margin: 5%;
     width: 100%;
   }
   .box-header {
