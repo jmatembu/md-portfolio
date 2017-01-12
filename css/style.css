@@ -632,7 +632,7 @@ input[name="content"] ~ .grid {
   border-radius: 5px;
 }
 .about-description {
-  font-size: 1.625rem;
+  font-size: 1.3125em;
   width: 60%;
   padding: 30px 60px;
 }
@@ -1163,17 +1163,6 @@ input[name="content"] ~ .grid {
   box-shadow: inset 0 0 10px #EE7785;
 }
 
-@media (max-width: 360px), (max-width: 600px) {
-  
-}
-
-@media (min-width: 1024px) {
-  .tab-component {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 /*#####################################
   SLIDE EMBEDS
 #######################################*/  
@@ -1245,6 +1234,10 @@ input[name="content"] ~ .grid {
 }
 
 @media (max-width: 1024px) {
+  .col12-sm {
+    width: 100%;
+  }
+
   .accordion {
     width: 100%;
   }
@@ -1270,52 +1263,7 @@ input[name="content"] ~ .grid {
   }
 }
 
-@media (max-width: 600px) {
-  .accordion > li {
-    border: 1px solid #2e8b57;
-  }
-  .accordion label {
-    background-color: #2e8b57;
-    color: #fff;
-  }
-  .accordion label:hover {
-    background-color: #e6e6fa;
-    border-left: 0.625rem solid #2e8b57;
-    color: #000000;
-  }
-  .accordion input[type="checkbox"]:checked + label {
-    background-color: #000000;
-    border-left: 0.625rem solid #2e8b57;
-    color: #e6e6fa;
-  }
-  .accordion input[type="checkbox"]:checked + label:hover {
-    color: #2e8b57;
-  }
-}
 
-@media (max-width: 360px) {
-  .accordion > li {
-    border: 1px solid #87ceeb;
-  }
-  .accordion label {
-    background-color: #87ceeb;
-    color: #fff;
-  }
-  .accordion label:hover {
-    background-color: #e6e6fa;
-    border-left: 0.625rem solid #87ceeb;
-    color: #000000;
-  }
-  .accordion input[type="checkbox"]:checked + label {
-    background-color: #000000;
-    border-left: 0.625rem solid #87ceeb;
-    color: #e6e6fa;
-  }
-  .accordion input[type="checkbox"]:checked + label:hover {
-    color: #87ceeb;
-  }
-
-}
 
 
 
@@ -1946,6 +1894,90 @@ li.cartProductPrice {
   font-size: 1.25rem;
 }
 
+
+
+
+/* ======= Modal ======== */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  font-size: 0;
+  width: 100vw;
+  z-index:1005;
+  transition: background-color .5s 1s, height .5s;
+}
+
+.modal-overlay:target {
+  height: 100vh;
+  font-size: unset;
+  background-color: rgba(0,0,0,0.4);
+  transition: font-size .3s .5s;
+}
+
+.modal-overlay .modal {
+  height: 0;
+  transition: height .5s;
+}
+
+.modal-overlay .modal > p {
+  position: relative;
+  top: calc(50% - 1em);
+  font-size: 2em;
+  text-align: center;
+}
+
+.modal-overlay:target .modal {
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+  top: calc(50% - 25vh);
+  left: calc(50% - 25vw);
+  background-color: #e3dede;
+}
+
+.modal .close-modal {
+  background-color: #8B8687;
+  border-radius: 0 0 0 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 3.125em;
+  width: 3.125em;
+  opacity: 0.6;
+  transition: opacity .5s;
+}
+
+.close-modal > span {
+  background-color: #E3DEDE;
+  height: .1875rem;
+  width: 70%;
+  position: absolute;
+  top: calc(50% - .3125rem);
+  left: 18%;
+  transform: rotate(-45deg);
+}
+
+.close-modal > span:before {
+  background-color: #e3dede;
+  position: absolute;
+  right: 0;
+  content: "";
+  height: .1875rem;
+  width: 100%;
+  transform: rotate(90deg);
+}
+
+.close-modal:hover {
+  opacity: 1;
+}
+
+
+
+
+
 /* ======= Misc ======== */
 .hidden {
   display: none;
@@ -1958,13 +1990,11 @@ li.cartProductPrice {
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
-  .col12-sm {
-    width: 100%;
-  }
-}
-
 @media (min-width: 1025px) {
+  .tab-component {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .slide .cart-products,
   .slide .cart-order {
@@ -2002,6 +2032,12 @@ li.cartProductPrice {
   .grid-item {
     width: 50%;
     border: none;
+  }
+
+  /* About Sectioon */
+  .about-description p {
+    text-align: left;
+    line-height: 1.7;
   }
 }
 
@@ -2160,6 +2196,28 @@ li.cartProductPrice {
     margin-bottom: .75em;
   }
 
+  /* Accordion */
+  .accordion > li {
+    border: 1px solid #2e8b57;
+  }
+  .accordion label {
+    background-color: #2e8b57;
+    color: #fff;
+  }
+  .accordion label:hover {
+    background-color: #e6e6fa;
+    border-left: 0.625rem solid #2e8b57;
+    color: #000000;
+  }
+  .accordion input[type="checkbox"]:checked + label {
+    background-color: #000000;
+    border-left: 0.625rem solid #2e8b57;
+    color: #e6e6fa;
+  }
+  .accordion input[type="checkbox"]:checked + label:hover {
+    color: #2e8b57;
+  }
+
 
 
   /* About Section
@@ -2311,87 +2369,34 @@ li.cartProductPrice {
     display: block;
   }
 }
+
 @media (max-width: 360px) {
+  .accordion > li {
+    border: 1px solid #87ceeb;
+  }
+  .accordion label {
+    background-color: #87ceeb;
+    color: #fff;
+  }
+  .accordion label:hover {
+    background-color: #e6e6fa;
+    border-left: 0.625rem solid #87ceeb;
+    color: #000000;
+  }
+  .accordion input[type="checkbox"]:checked + label {
+    background-color: #000000;
+    border-left: 0.625rem solid #87ceeb;
+    color: #e6e6fa;
+  }
+  .accordion input[type="checkbox"]:checked + label:hover {
+    color: #87ceeb;
+  }
+
   .cartProductDetails .cartProductName,
   .cartProductDetails .cartProductQuantity,
   .cartProductDetails .cartProductPrice,
   .cartProductDetails .cartProductAction {
     min-height: 4rem;
   }
-}
 
-.modal-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0;
-  font-size: 0;
-  width: 100vw;
-  z-index:1005;
-  transition: background-color .5s 1s, height .5s;
-}
-
-.modal-overlay:target {
-  height: 100vh;
-  font-size: unset;
-  background-color: rgba(0,0,0,0.4);
-  transition: font-size .3s .5s;
-}
-
-.modal-overlay .modal {
-  height: 0;
-  transition: height .5s;
-}
-
-.modal-overlay .modal > p {
-  position: relative;
-  top: calc(50% - 1em);
-  font-size: 2em;
-  text-align: center;
-}
-
-.modal-overlay:target .modal {
-  position: relative;
-  width: 50vw;
-  height: 50vh;
-  position: absolute;
-  top: calc(50% - 25vh);
-  left: calc(50% - 25vw);
-  background-color: #e3dede;
-}
-
-.modal .close-modal {
-  background-color: #8B8687;
-  border-radius: 0 0 0 50%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 3.125em;
-  width: 3.125em;
-  opacity: 0.6;
-  transition: opacity .5s;
-}
-
-.close-modal > span {
-  background-color: #E3DEDE;
-  height: .1875rem;
-  width: 70%;
-  position: absolute;
-  top: calc(50% - .3125rem);
-  left: 18%;
-  transform: rotate(-45deg);
-}
-
-.close-modal > span:before {
-  background-color: #e3dede;
-  position: absolute;
-  right: 0;
-  content: "";
-  height: .1875rem;
-  width: 100%;
-  transform: rotate(90deg);
-}
-
-.close-modal:hover {
-  opacity: 1;
 }
