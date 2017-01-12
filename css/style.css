@@ -814,25 +814,38 @@ input[name="content"] ~ .grid {
 }
 
 .bar {
+  position: relative;
   border-radius: 2px 2px 0 0;
   list-style: none;
   padding: 0;
   width: 15%;
   bottom: 0;
 }
-.bar span {
-  display: none;
-}
-.bar:hover span {
-  position: relative;
-  display: block;
-  top: -60px;
-  width: 120px;
-  left: -120%;
-  background-color: #333030;
+.bar:hover:before {
+  border-radius: 3px;
   color: #e3dede;
+  content: attr(data-tooltip);
+  position: absolute;
+  height: 60px;
+  display: block;
+  width: 200px;
   padding: 5px;
+  background-color: #333030;
+  top: -60px;
+  left: calc(50% - 90px);
+  overflow: hidden;
   font-size: 80%;
+  z-index: 10;
+}
+
+.bar:hover:after {
+  content: "";
+  border-top: 10px solid #333030;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 10px);
 }
 
 #fb1 {
@@ -856,43 +869,43 @@ input[name="content"] ~ .grid {
 }
 
 #bb1 {
-  height: 25%;
+  height: 20%;
 }
 
 #bb2 {
-  height: 25%;
+  height: 65%;
 }
 
 #bb3 {
-  height: 25%;
+  height: 65%;
 }
 
 #bb4 {
-  height: 25%;
+  height: 30%;
 }
 
 #bb5 {
-  height: 25%;
+  height: 15%;
 }
 
 #ob1 {
-  height: 100%;
+  height: 50%;
 }
 
 #ob2 {
-  height: 75%;
+  height: 25%;
 }
 
 #ob3 {
-  height: 100%;
+  height: 30%;
 }
 
 #ob4 {
-  height: 40%;
+  height: 45%;
 }
 
 #ob5 {
-  height: 18%;
+  height: 60%;
 }
 
 #fb1, #bb1, #ob1 {
