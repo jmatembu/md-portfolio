@@ -826,7 +826,7 @@ input[name="content"] ~ .grid {
   color: #e3dede;
   content: attr(data-tooltip);
   position: absolute;
-  height: 60px;
+  height: 50px;
   display: block;
   width: 200px;
   padding: 5px;
@@ -846,6 +846,10 @@ input[name="content"] ~ .grid {
   position: absolute;
   top: -10px;
   left: calc(50% - 10px);
+}
+
+.barGraph > .bar:nth-child(-2n) {
+  width: 100px;
 }
 
 #fb1 {
