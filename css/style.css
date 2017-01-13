@@ -676,11 +676,11 @@ input[name="content"] ~ .grid {
 }
 
 .frontendGraphContainer h3 {
-  color: #f95553;
+  color: #EE7785;
 }
 
 .backendGraphContainer h3 {
-  color: #4a70eb;
+  color: #84B1ED;
 }
 
 .skills .row:last-child .col6 {
@@ -912,23 +912,23 @@ input[name="content"] ~ .grid {
   height: 60%;
 }
 
-#fb1, #bb1, #ob1 {
+.barGraph > .bar:first-child {
   background-color: #ffac42;
 }
 
-#fb2, #bb2, #ob2 {
+.barGraph > .bar:nth-child(2) {
   background-color: #38b9f0;
 }
 
-#fb3, #bb3, #ob3 {
+.barGraph > .bar:nth-child(3) {
   background-color: #6ad12c;
 }
 
-#fb4, #bb4, #ob4 {
+.barGraph > .bar:nth-child(4) {
   background-color: #fa8ab0;
 }
 
-#fb5, #bb5, #ob5 {
+.barGraph > .bar:last-child {
   background-color: #f0e210;
 }
 
