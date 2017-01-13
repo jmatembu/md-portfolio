@@ -821,6 +821,9 @@ input[name="content"] ~ .grid {
   width: 15%;
   bottom: 0;
 }
+.bar:hover {
+  cursor: help;
+}
 .bar:hover:before {
   border-radius: 3px;
   color: #e3dede;
