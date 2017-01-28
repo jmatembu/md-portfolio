@@ -369,7 +369,7 @@ button {
   padding-top: 3px;
   margin-right: 10px;
   -webkit-transition: color 0.3s, border-radius .3s, background-color .5s;
-  transition: color 0.3s, border-radius .3s, background-color .5s;
+  transition: color 1s, border-radius 1s, background-color 1s;
 }
 
 .social > a:hover {
