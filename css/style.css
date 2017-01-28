@@ -478,7 +478,7 @@ main > input[name="content"] {
   display: block;
   margin-top: .3125em;
   font-family: monospace;
-  font-size: .3125em;
+  font-size: .4em;
 }
 .title {
   margin: 0;
