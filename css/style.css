@@ -512,6 +512,9 @@ main > input[name="content"] {
   transition: width .5s ease-in-out, background-color .5s;
 }
 
+.copyright-text {
+  font-size: .75em;
+}
 /* main content */
 .content {
   position: absolute;
