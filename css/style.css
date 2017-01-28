@@ -598,15 +598,47 @@ input[id*="contact"]:checked ~ .grid .grid-item:nth-child(3) {
 
 input[name="content"]:checked ~ .grid {
   transform: scale(0, 0);
-  transition: transform 0s 1.5s;
+  transition: transform 0s 2s;
 }
 
+
+/* Content Animation */
 input[name="content"] ~ .content {
-  /* Animation */
+  transition: opacity 3s;
 }
 
 input[name="content"] ~ .grid {
-  /* Animation */
+  transform: scale(1, 1);
+  transition: transform 0s;
+}
+
+input[name="content"] ~ .grid .grid-item:first-child {
+  transform: translateY(0);
+  transform-origin: 0%;
+  transition: transform 1s ease-out;
+}
+
+input[name="content"] ~ .grid .grid-item:last-child {
+  transform: translateY(0);
+  transform-origin: 100%;
+  transition: transform 1s ease-out;
+}
+
+input[name="content"] ~ .grid .grid-item:nth-child(2),
+
+input[name="content"] ~ .grid .grid-item:nth-child(4) {
+  transform: rotateY(0deg);
+  opacity: 1;
+  transform-origin: 0%;
+  transition: transform 1.5s ease-out, opacity .8s .5s;
+}
+
+input[name="content"] ~ .grid .grid-item:nth-child(3),
+input[name="content"] ~ .grid .grid-item:nth-child(5) {
+  transform: rotateY(0deg);
+  opacity: 1;
+  transform-origin: 100%;
+  transition: transform 1.5s ease-out, opacity .8s .5s;
 }
 
 .scroll-wrap {
@@ -974,7 +1006,7 @@ input[name="content"] ~ .grid {
   transform: translate3d(0, 40px, 0);
 }
 
-/* close button (for content and sidebar) */
+/* close button for content */
 .close-button {
   position: absolute;
   border: none;
