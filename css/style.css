@@ -1013,7 +1013,6 @@ input[name="content"] ~ .grid .grid-item:nth-child(5) {
 .close-button {
   position: absolute;
   border: none;
-  border-radius: 0 0 0 50%;
   background-color: #a3a1a1;
   margin: 0;
   z-index: 100;
@@ -1023,17 +1022,12 @@ input[name="content"] ~ .grid .grid-item:nth-child(5) {
   color: #e3dede;
   cursor: pointer;
   padding: 15px 25px;
-  opacity: 1;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  transition: background-color .8s;
 }
 
-.close-button span {
-  display: none;
-}
 
 .close-button:hover {
-  color: #333030;
+  background-color: #8b8687;
 }
 
 
