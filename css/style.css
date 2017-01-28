@@ -109,6 +109,9 @@ button {
   -ms-user-select: none;
 }
 
+.container {
+  min-width: 360px;
+}
 .row {
   width: 100%;
 }
@@ -664,6 +667,9 @@ input[name="content"] ~ .grid .grid-item:nth-child(5) {
   opacity: 1;
   padding: 60px 60px 80px 60px;
   font-size: 0.85em;
+}
+.content-item > h2 {
+  font-size: 3em;
 }
 .content-item p {
   max-width: 1200px;
