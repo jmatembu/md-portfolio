@@ -320,6 +320,7 @@ button {
 
 .search-form > .search-button:hover {
   font-weight: bold;
+  background-color: #8b8687;
 }
 
 .search-form > .search-button,
@@ -335,7 +336,7 @@ button {
   left: 10px;
   top: 40%;
   opacity: .5;
-  z-index: 10;
+  cursor: text;
   -webkit-transition: left .3s ease, -webkit-transform .3s ease-in-out;
   transition: left .3s ease, -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out, left .3s ease;
@@ -2087,8 +2088,10 @@ li.cartProductPrice {
 
 .modal .close-modal {
   background-color: #8B8687;
-  border-radius: 0 0 0 50%;
+  color: #E3DEDE;
+  border-radius: 0 0 0 20%;
   position: absolute;
+  text-decoration: none;
   right: 0;
   top: 0;
   height: 3.125em;
@@ -2098,26 +2101,10 @@ li.cartProductPrice {
   transition: opacity .5s;
 }
 
-.close-modal > span {
-  background-color: #E3DEDE;
-  height: .1875rem;
-  width: 70%;
+.close-modal > i {
   position: absolute;
-  top: calc(50% - .3125rem);
-  left: 18%;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.close-modal > span:before {
-  background-color: #e3dede;
-  position: absolute;
-  right: 0;
-  content: "";
-  height: .1875rem;
-  width: 100%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  top: calc(50% - 8.5px);
+  left: calc(50% - 8px);
 }
 
 .close-modal:hover {
