@@ -2136,6 +2136,9 @@ li.cartProductPrice {
   left: calc(50% - 25vw);
   background-color: #e3dede;
 }
+.modal-overlay:target i {
+  display: inline;
+}
 
 .modal {
   position: relative;
@@ -2159,6 +2162,7 @@ li.cartProductPrice {
   position: absolute;
   top: calc(50% - 12px);
   left: calc(50% - 12px);
+  display: none;
 }
 
 .close-modal:hover {
