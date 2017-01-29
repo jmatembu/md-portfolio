@@ -505,6 +505,9 @@ main > input[name="content"] {
   /*width: 100%;*/
 }
 
+.title > i {
+  font-size: 54px;
+}
 .loader {
   height: 1px;
   margin: .625rem auto;
@@ -1054,7 +1057,7 @@ input[name="content"] ~ .grid .grid-item:nth-child(5) {
   font-size: 18px;
   color: #e3dede;
   cursor: pointer;
-  padding: 15px 25px;
+  padding: 10px 15px;
   transition: background-color .8s;
 }
 
@@ -1063,6 +1066,9 @@ input[name="content"] ~ .grid .grid-item:nth-child(5) {
   background-color: #8b8687;
 }
 
+.close-button > i {
+  vertical-align: bottom;
+}
 
 /* Utility classes 
  ------------------------------------------*/
