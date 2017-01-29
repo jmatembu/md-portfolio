@@ -2110,7 +2110,7 @@ li.cartProductPrice {
   left: 0;
   height: 0;
   font-size: 0;
-  width: 100vw;
+  width: 100%;
   z-index:1005;
   transition: background-color .5s ease-out .2s, height .5s ease-out;
 }
@@ -2129,8 +2129,7 @@ li.cartProductPrice {
 }
 
 .modal-overlay:target .modal {
-  position: relative;
-  width: 50vw;
+  width: 50%;
   height: 50vh;
   position: absolute;
   top: calc(50% - 25vh);
@@ -2138,6 +2137,9 @@ li.cartProductPrice {
   background-color: #e3dede;
 }
 
+.modal {
+  position: relative;
+}
 .modal .close-modal {
   background-color: #8B8687;
   color: #E3DEDE;
