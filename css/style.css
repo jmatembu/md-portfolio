@@ -693,7 +693,7 @@ input[name="content"] ~ .grid .grid-item:nth-child(5) {
   font-size: 1em;
   width: 100%;
   padding: 30px 0;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .about-description a {
   text-decoration: underline dotted;
@@ -714,6 +714,7 @@ input[name="content"] ~ .grid .grid-item:nth-child(5) {
   border-radius: 5px 5px 0 5px;
   font-size: 1.5em;
   padding: 20px 30px;
+  text-align: center;
 }
 .about-quote:after {
   content: "";
@@ -730,8 +731,8 @@ input[name="content"] ~ .grid .grid-item:nth-child(5) {
 .about-quote-author {
   font-style: italic;
   display: block;
-  float: right;
-  margin-top: 15px;
+  margin: 15px auto 0 auto;
+  width: 90%;
   text-align: right;
 }
 
@@ -2270,56 +2271,7 @@ li.cartProductPrice {
   }
 }
 @media screen and (max-width: 600px) {
-  main {
-    /*margin-top: 60px;*/
-  }
 
-  .sidebar {
-    padding-top: 4rem;
-  }
-
-  .menu-toggle {
-    width: 100%;
-    visibility: visible;
-    z-index: 999;
-  }
-
-  .show-sidebar:checked + .menu-toggle > label {
-    left: 300px;
-  }
-
-  .show-sidebar:checked + .menu-toggle span {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-
-  .show-sidebar:checked + .menu-toggle span:before {
-    -webkit-transform: translateY(0) rotate(90deg);
-            transform: translateY(0) rotate(90deg);
-  }
-
-  .show-sidebar:checked + .menu-toggle span:after {
-    display: none;
-  }
-
-  .show-sidebar ~ .sidebar {
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-  }
-
-  .show-sidebar:checked ~ .sidebar {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  .show-sidebar:checked ~ main {
-    pointer-events: none;
-    opacity: 0.4;
-  }
-
-  .show-sidebar:checked ~ .sidebar .close-button {
-    display: block;
-  }
 
   .title-full {
     font-size: 2em;
@@ -2427,11 +2379,13 @@ li.cartProductPrice {
   /* About Section
    -----------------------------*/
   .about-title {    
-    text-align: center;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .about-title:after {
-    margin: 0 auto;
+    width: 100%;
   }
 
   .full-profile-picture,
@@ -2443,18 +2397,27 @@ li.cartProductPrice {
   
   .about-description {
     font-size: 1.25rem;
-    padding: 45px 0;
   }
 
-  .about-description > p {
-    text-align: center;
+  .about-description > img {
+    display: block;
+    width: 100%;
   }
 
   .about-description > p:after {
     float: unset;
     margin: 2em auto 0 auto;
   }
+  
+  .about-quote {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
 
+  .about-quote-author {
+    width: 90%;
+  }
 
 
   /* Skills Section */
