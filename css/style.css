@@ -2106,27 +2106,18 @@ li.cartProductPrice {
   font-size: 0;
   width: 100vw;
   z-index:1005;
-  -webkit-transition: background-color .5s 1s, height .5s;
-  transition: background-color .5s 1s, height .5s;
+  transition: background-color .5s ease-out .2s, height .5s ease-out;
 }
 
 .modal-overlay:target {
   height: 100vh;
   font-size: unset;
   background-color: rgba(0,0,0,0.4);
-  -webkit-transition: font-size .3s .5s;
-  transition: font-size .3s .5s;
-}
-
-.modal-overlay .modal {
-  height: 0;
-  -webkit-transition: height .5s;
-  transition: height .5s;
 }
 
 .modal-overlay .modal > p {
   position: relative;
-  top: calc(50% - 1em);
+  top: calc(50% - .875em);
   font-size: 2em;
   text-align: center;
 }
@@ -2158,17 +2149,17 @@ li.cartProductPrice {
 
 .close-modal > i {
   position: absolute;
-  top: calc(50% - 8.5px);
-  left: calc(50% - 8px);
+  top: calc(50% - 12px);
+  left: calc(50% - 12px);
 }
 
 .close-modal:hover {
   opacity: 1;
 }
 
-
-
-
+/*#close-modal-overlay:target + .modal-overlay .modal {
+  transition: background-color .5s ease-out .5s, height .5s ease-out;
+}*/
 
 /* ======= Misc ======== */
 .hidden {
