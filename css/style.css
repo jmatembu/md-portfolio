@@ -529,6 +529,9 @@ main > input[name="content"] {
   overflow-y: auto;
   pointer-events: none;
   transform: translateY(300px);
+  transition: height 1s, transform 1s, opacity 1s;
+  /*transition: transform 1s ease-out, opacity .8s;*/
+  /*transition: opacity 5s, transform 5s ease-out;*/
 }
 
 input[name="content"]:checked + .content {
@@ -536,7 +539,6 @@ input[name="content"]:checked + .content {
   height: 100%;
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 3s, transform 1s ease-out;
 }
 
 
@@ -607,17 +609,6 @@ input[name="content"]:checked ~ .grid {
   transition: transform 0s 2s;
 }
 
-
-/* Content Animation */
-input[name="content"] ~ .content {
-  transition: opacity 3s;
-}
-
-input[name="content"] ~ .grid {
-  transform: scale(1, 1);
-  transition: transform 0s;
-}
-
 input[name="content"] ~ .grid .grid-item:first-child {
   transform: translateY(0);
   transform-origin: 0%;
@@ -647,7 +638,7 @@ input[name="content"] ~ .grid .grid-item:nth-child(5) {
   transition: transform 1.5s ease-out, opacity .8s .5s;
 }
 
-.scroll-wrap {
+/*.scroll-wrap {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -656,7 +647,7 @@ input[name="content"] ~ .grid .grid-item:nth-child(5) {
   z-index: 1;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-}
+}*/
 
 /* single content item */
 .content-item {
