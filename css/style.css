@@ -10,6 +10,13 @@ html {
   padding: 0;
 }
 
+html,
+body,
+main,
+.container {
+  height: 100%;
+}
+
 body {
   background-color: #FAFAFA;
   color: #333030;
@@ -609,6 +616,7 @@ input[id*="contact"]:checked ~ .grid .grid-item:nth-child(3) {
 
 input[name="content"]:checked ~ .grid {
   transform: scale(0, 0);
+  height: 0;
   transition: transform 0s 2s;
 }
 
@@ -2231,12 +2239,6 @@ li.cartProductPrice {
 }
 
 @media screen and (min-width: 601px) {
-  html,
-  body,
-  main,
-  .container, {
-    height: 100%;
-  }
 
   main {
     /*height: 100%;*/
