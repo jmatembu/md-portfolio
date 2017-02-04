@@ -14,11 +14,8 @@
 </head>
 <body>
   <div class="container">
-    
-    <input type="checkbox" id="sidebar-toggle" class="show-sidebar">
-
     <main>
-      <input type="checkbox" name="content" id="about-input">
+      <input type="checkbox" class="content-selector" name="content" id="about-input">
       <section class="content">
         <div class="content-item" id="about">
 
@@ -46,7 +43,7 @@
         </label>
       </section>
 
-      <input type="checkbox" name="content" id="projects-input">
+      <input type="checkbox" class="content-selector" name="content" id="projects-input">
       <section class="content">
 
         <div class="content-item" id="projects">
@@ -682,7 +679,7 @@
         </label>
       </section>
 
-      <input type="checkbox" name="content" id="skills-input">
+      <input type="checkbox" class="content-selector" name="content" id="skills-input">
       <section class="content">
 
         <div class="content-item" id="skills">
@@ -785,7 +782,7 @@
         </label>
       </section>
       
-      <input type="checkbox" name="content" id="contact-input">
+      <input type="checkbox" class="content-selector" name="content" id="contact-input">
       <section class="content">
         <div class="content-item" id="contact">
           <h2>Contact Me</h2>
@@ -829,10 +826,10 @@
             <a href="http://github.com/jmatembu" target="_blank" title="Github"><i class="fa fa-github fa-2x"></i></a>
           </div>
 
-          <form class="search-form">
-            <input type="search" id="search" class="search-input">
-            <label for="search">Search</label>
-            <a href="#search-modal" class="search-button"><i class="material-icons">search</i></a>
+          <form class="search__form">
+            <input type="search" id="search" class="search__input">
+            <label for="search" class="search__label">Search</label>
+            <a href="#search-modal" class="search__button"><i class="material-icons">search</i></a>
           </form>
         </div>
         <label class="grid-item" for="about-input">

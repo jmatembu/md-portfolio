@@ -1,0 +1,12 @@
+@mixin user-select($value)  {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@mixin grid-item-transition($deg, $origin, $transform-speed, $opacity-speed, $opacity-delay) {
+  transform: rotateY($deg);
+  opacity: 1;
+  transform-origin: $origin;
+  transition: transform $transform-speed ease-out, opacity $opacity-speed $opacity-delay;
+}

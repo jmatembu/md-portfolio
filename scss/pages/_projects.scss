@@ -1,0 +1,15 @@
+/*******************************
+  PROJECTS SECTION
+********************************/
+#projects h2 {
+  color: $projects-primary-color;
+}
+
+@media screen and (max-width: 600px) {    
+  .fa-arrow-right {
+    display: none;
+  }
+  .fa-arrow-down {
+    display: block;
+  }
+}

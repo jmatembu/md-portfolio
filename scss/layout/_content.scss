@@ -1,0 +1,143 @@
+// Main Content
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  overflow-y: auto;
+  pointer-events: none;
+  transform: translateY(300px);
+  transition: height 1s, transform 1s, opacity 1s;
+}
+
+.content-selector {
+  display: none;
+
+  &:checked {
+    + .content {
+    pointer-events: auto;
+    height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+    ~ .grid {
+      transform: scale(0, 0);
+      height: 0;
+      transition: transform 0s 2s;
+    }
+
+  }
+
+  &:first-of-type:checked,
+  &:nth-of-type(2):checked,
+  &:nth-of-type(3):checked,
+  &:nth-of-type(4):checked {
+    ~ .grid .grid-item:first-child {
+      transform: translateY(-300px);
+      transform-origin: 0%;
+      transition: transform 1s ease-out;
+    }
+
+    ~ .grid .grid-item:last-child {
+      transform: translateY(100px);
+      transform-origin: 100%;
+      transition: transform 1s ease-out;
+    }
+
+  }
+
+  &:first-of-type:checked ~ .grid .grid-item:nth-child(2),
+  &:nth-of-type(2):checked ~ .grid .grid-item:nth-child(4) {
+      transform: rotateY(180deg);
+      transform-origin: 0%;
+      opacity: 0;
+      transition: transform 1s ease-out, opacity .8s .6s;
+  }
+
+  // End of content selector
+}
+
+/* Grid Animation */
+
+
+
+
+
+input[id*="about"]:checked ~ .grid .grid-item:nth-child(4),
+input[id*="projects"]:checked ~ .grid .grid-item:nth-child(4),
+input[id*="skills"]:checked ~ .grid .grid-item:nth-child(2),
+input[id*="contact"]:checked ~ .grid .grid-item:nth-child(2) {
+  transform: rotateY(180deg);
+  opacity: 0;
+  transform-origin: 0%;
+  transition: transform 2s ease-out, opacity .8s 1s;
+}
+
+input[id*="about"]:checked ~ .grid .grid-item:nth-child(3),
+input[id*="projects"]:checked ~ .grid .grid-item:nth-child(3),
+input[id*="skills"]:checked ~ .grid .grid-item:nth-child(5),
+input[id*="contact"]:checked ~ .grid .grid-item:nth-child(5) {
+  transform: rotateY(-180deg);
+  opacity: 0;
+  transform-origin: 100%;
+  transition: transform 1s ease-out, opacity .8s .6s;
+}
+
+input[id*="about"]:checked ~ .grid .grid-item:nth-child(5),
+input[id*="projects"]:checked ~ .grid .grid-item:nth-child(5),
+input[id*="skills"]:checked ~ .grid .grid-item:nth-child(3),
+input[id*="contact"]:checked ~ .grid .grid-item:nth-child(3) {
+  transform: rotateY(-180deg);
+  opacity: 0;
+  transform-origin: 100%;
+  transition: transform 2s ease-out, opacity .8s 1s;
+}
+
+
+
+/* single content item */
+.content-item {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  opacity: 1;
+  padding: 60px 60px 80px 60px;
+  font-size: 0.85em;
+
+  h2 {
+    font-size: 3em;
+  }
+
+  p {
+    max-width: 1200px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .content-item {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content-item {
+    padding: 80px 20px 40px;
+  }
+  .content .close-button {
+    padding: 10px 20px;
+  }
+
+  .content .close-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+    pointer-events: none;
+    z-index: -1;
+  }
+}

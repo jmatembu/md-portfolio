@@ -1,0 +1,34 @@
+/* ##############################
+   SKILLS SECTION
+   ##############################*/
+.skills {
+  text-align: center;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .row:last-child {
+    .col6 {
+      float: none;
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .skillsBar {
+    width: 100%;
+  }
+
+  .frontendSkills, .backendSkills {
+    font-size: 1.25em;
+    padding: 10px;
+  }
+
+  .frontendGraphContainer,
+  .backendGraphContainer,
+  .otherGraphContainer {
+    padding: 3.625em 0px;
+  }
+}

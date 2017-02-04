@@ -1,0 +1,45 @@
+/* Utility classes 
+ ------------------------------------------*/
+.divider {
+  background-color: #e3dede;
+  display: block;
+  width: 70%;
+  height: 1px;
+  margin: 2rem auto 2rem auto;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.textCenter {
+  text-align: center;
+}
+.error {
+  display: none;
+  width: 100%;
+  padding: 0;
+  background-color: #FF0000;
+  color: #FFFFFF;
+  font-size: 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.error.active {
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
+  display: block;
+}
+
+.hidden {
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.left {
+  float: right;
+}
+.fa-arrow-down {
+  display: none;
+}

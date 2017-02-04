@@ -1,0 +1,260 @@
+.frontendGraphContainer,
+.backendGraphContainer {
+  padding: 2em;
+}
+
+.frontendGraphContainer h3 {
+  color: $projects-primary-color;
+}
+
+.backendGraphContainer h3 {
+  color: $about-primary-color;
+}
+
+.skillsBar {
+  width: 75%;
+  margin: 0 auto;
+
+  &:after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+  }
+}
+
+.frontendSkills {
+  background-color: $projects-primary-color;
+  width: 70%;
+  border-radius: 2px 0 0 2px;
+  padding-left: 0.5em;
+
+  span {
+    text-align: left;
+    display: block;
+  }
+}
+
+.frontendSkills,
+.backendSkills {
+  color: #FFFFFF;
+  float: left;
+  font-size: 1.25em;
+  padding: 5px 10px;
+}
+
+.backendSkills {
+  background-color: #4a70eb;
+  width: 30%;
+  border-radius: 0 2px 2px 0;
+  padding-right: 0.5em;
+
+  span {
+    display: block;
+    text-align: right;
+  }
+}
+
+.graphWrapper {
+  border-bottom: 1px solid #bababa;
+  height: 12.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 4em auto;
+  padding-right: 1em;
+  width: 22.8125em;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+}
+
+.yAxis {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 2em;
+
+
+  li {
+    padding-right: 2em;
+    text-align: right;
+  }
+
+}
+
+.xAxis {
+  width: 100%;
+  padding-left: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  li {
+    font-size: 0.8125em;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    line-height: 1;
+    width: 20%;
+    padding-left: 1.25rem;
+    padding-top: 0.5em;;
+  }
+}
+
+.barGraph {
+  height: inherit;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+
+  > .bar:nth-child(-2n) {
+    width: 100px;
+  }
+  > .bar:first-child {
+    background-color: #ffac42;
+  }
+
+  > .bar:nth-child(2) {
+    background-color: #38b9f0;
+  }
+
+  > .bar:nth-child(3) {
+    background-color: #6ad12c;
+  }
+
+  > .bar:nth-child(4) {
+    background-color: #fa8ab0;
+  }
+
+  > .bar:last-child {
+    background-color: #f0e210;
+  }
+}
+
+.bar {
+  position: relative;
+  border-radius: 2px 2px 0 0;
+  list-style: none;
+  padding: 0;
+  width: 15%;
+  bottom: 0;
+
+  &:hover {
+    cursor: help;
+
+    &:before {
+      border-radius: 3px;
+      color: #e3dede;
+      content: attr(data-tooltip);
+      position: absolute;
+      height: 50px;
+      display: block;
+      width: 200px;
+      padding: 5px;
+      background-color: #333030;
+      top: -60px;
+      left: calc(50% - 90px);
+      overflow: hidden;
+      font-size: 80%;
+      z-index: 10;
+    }
+    &:after {
+      content: "";
+      border-top: 10px solid #333030;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      position: absolute;
+      top: -10px;
+      left: calc(50% - 10px);
+    }
+  }
+}
+
+
+#fb1 {
+  height: 40%;
+}
+
+#fb2 {
+  height: 80%;
+}
+
+#fb3 {
+  height: 5%;
+}
+
+#fb4 {
+  height: 5%;
+}
+
+#fb5 {
+  height: 25%;
+}
+
+#bb1 {
+  height: 20%;
+}
+
+#bb2 {
+  height: 65%;
+}
+
+#bb3 {
+  height: 65%;
+}
+
+#bb4 {
+  height: 30%;
+}
+
+#bb5 {
+  height: 15%;
+}
+
+#ob1 {
+  height: 50%;
+}
+
+#ob2 {
+  height: 25%;
+}
+
+#ob3 {
+  height: 30%;
+}
+
+#ob4 {
+  height: 45%;
+}
+
+#ob5 {
+  height: 60%;
+}

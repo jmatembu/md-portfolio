@@ -1,0 +1,78 @@
+/* ======= Modal ======== */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  font-size: 0;
+  width: 100%;
+  z-index:1005;
+  transition: background-color .5s ease-out .2s, height .5s ease-out;
+}
+
+.modal-overlay:target {
+  height: 100vh;
+  font-size: unset;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-overlay .modal > p {
+  position: relative;
+  top: calc(50% - .875em);
+  font-size: 2em;
+  text-align: center;
+}
+
+.modal-overlay:target .modal {
+  width: 50%;
+  height: 50vh;
+  position: absolute;
+  top: calc(50% - 25vh);
+  left: calc(50% - 25vw);
+  background-color: #e3dede;
+}
+.modal-overlay:target i {
+  display: inline;
+}
+
+.modal {
+  position: relative;
+}
+.modal .close-modal {
+  background-color: #8B8687;
+  color: #E3DEDE;
+  border-radius: 0 0 0 20%;
+  position: absolute;
+  text-decoration: none;
+  right: 0;
+  top: 0;
+  height: 3.125em;
+  width: 3.125em;
+  opacity: 0.6;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.close-modal > i {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 12px);
+  display: none;
+}
+
+.close-modal:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-overlay:target .modal {
+    width: 70vw;
+    top: calc(50% - 35vh);
+    left: calc(50% - 35vw);
+  }
+
+  .modal-overlay .modal > p {
+    top: calc(50% - 1.625em);
+    font-size: 1.625em;
+  }
+}

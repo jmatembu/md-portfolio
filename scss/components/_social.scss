@@ -1,0 +1,32 @@
+/* Social Links 
+  ------------------------------------*/
+.social {
+  color: #8b8687;
+
+  > span {
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: .625rem;
+  }
+
+  > a {
+    border-radius: 2px;
+    color: #8b8687;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e3dede;
+    padding-top: 3px;
+    margin-right: 10px;
+    -webkit-transition: color 0.3s, border-radius .3s, background-color .5s;
+    transition: color 1s, border-radius 1s, background-color 1s;
+
+    &:hover {
+      background-color: #a3a1a1;
+      color: #e3dede;
+      border-radius: 50%;
+    }
+
+  }
+
+}

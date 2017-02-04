@@ -1,0 +1,72 @@
+/* GALLERY EMBED
+ ----------------------------------*/
+.slide .gallery,
+.slide .login,
+.slide .login,
+.slide .accordion {
+  text-align: left;
+}
+.gallery {
+  position: relative;
+  max-height: 53.125rem;
+}
+.gallery input[type="radio"] {
+  display: none;
+}
+
+.thumbnails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  top: 0.4375rem;
+  z-index: 20;
+}
+
+.thumbnails label {
+  cursor: pointer;
+  width: 20%;
+}
+
+.thumbnail {
+  border: 5px solid #000;
+  opacity: 0.75;
+  width: 100%;
+  -webkit-transition: opacity 0.5s, border-color 0.5s, -webkit-transform 0.8s;
+  transition: opacity 0.5s, border-color 0.5s, -webkit-transform 0.8s;
+  transition: opacity 0.5s, border-color 0.5s, transform 0.8s;
+  transition: opacity 0.5s, border-color 0.5s, transform 0.8s, -webkit-transform 0.8s;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  border-color: #dcdcdc;
+}
+.gallery .photo {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  -webkit-transform: scale(0.1, 0.1) skew(10deg, 45deg);
+          transform: scale(0.1, 0.1) skew(10deg, 45deg);
+  -webkit-transform-origin: middle right;
+          transform-origin: middle right;
+  -webkit-transition: opacity .5s, -webkit-transform 0.75s ease-in-out;
+  transition: opacity .5s, -webkit-transform 0.75s ease-in-out;
+  transition: opacity .5s, transform 0.75s ease-in-out;
+  transition: opacity .5s, transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  overflow: hidden;
+}
+
+.gallery input[type="radio"]:checked + .photo {
+  opacity: 1;
+  -webkit-transform: skew(0deg, 0deg) scale(1,1);
+          transform: skew(0deg, 0deg) scale(1,1);
+}
