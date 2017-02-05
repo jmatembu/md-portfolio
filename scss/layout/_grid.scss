@@ -44,3 +44,9 @@
   float: left;
   padding: 5px;
 }
+
+@media (max-width: 1024px) {
+  .col12-sm {
+    width: 100%;
+  }
+}

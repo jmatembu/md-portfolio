@@ -57,18 +57,12 @@
 
 .graphWrapper {
   border-bottom: 1px solid #bababa;
-  height: 12.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  @include display-flex();
+  @include flex-wrap(wrap);
+  @include justify-content(space-between, justify);
+  @include box-size(22.8125em, 12.5em);
   margin: 4em auto;
   padding-right: 1em;
-  width: 22.8125em;
 
   &:after {
     content: "";
@@ -80,18 +74,10 @@
 
 .yAxis {
   width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  @include display-flex();
+  @include flex-wrap(wrap);
+  @include flex-direction(column, normal, vertical);
+  @include justify-content(space-between, justify);
   padding-bottom: 2em;
 
 
@@ -105,16 +91,12 @@
 .xAxis {
   width: 100%;
   padding-left: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  @include display-flex();
+  @include justify-content(space-between, justify);
+
   li {
     font-size: 0.8125em;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    @include transform(rotate(45deg));
     line-height: 1;
     width: 20%;
     padding-left: 1.25rem;
@@ -123,21 +105,15 @@
 }
 
 .barGraph {
-  height: inherit;
-  width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  @include box-size(70%, inherit);
+  @include display-flex();
+  @include align-items(flex-end, end);
+  @include justify-content(space-between, justify);
 
   > .bar:nth-child(-2n) {
     width: 100px;
   }
+
   > .bar:first-child {
     background-color: #ffac42;
   }

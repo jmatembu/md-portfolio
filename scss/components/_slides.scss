@@ -1,35 +1,51 @@
 
 /* Slides
  ------------------------------------*/
-
 .slides {
   position: relative;
   list-style: none;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-}
 
-.slides input[type="radio"] {
-  display: none;
-}
-.slides input[type="radio"]:checked + .slide {
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  input[type="radio"] {
+    display: none;
+
+    &:checked + .slide {
+      opacity: 1;
+      pointer-events: auto;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+
+    &:nth-of-type(1):checked ~ .slide-indicators > label:first-child,
+    &:nth-of-type(2):checked ~ .slide-indicators > label:nth-child(2),
+    &:nth-of-type(3):checked ~ .slide-indicators > label:nth-child(3),
+    &:nth-of-type(4):checked ~ .slide-indicators > label:last-child {
+      background-color: $projects-primary-color;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: .625em;
+  }
+
+  &::-webkit-scrollbar-thumb:vertical {
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:vertical {
+    box-shadow: inset 0 0 10px $projects-primary-color;
+  }
 }
 
 .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
+  @include absolute-top-left(0, 0);
   opacity: 0;
-  text-align: center;
   width: 100%;
   pointer-events: none;
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
+  text-align: center;
+  @include transform(translateX(50px));
   -webkit-transition: opacity .3s, -webkit-transform .5s;
   transition: opacity .3s, -webkit-transform .5s;
   transition: transform .5s, opacity .3s;
@@ -52,39 +68,21 @@
   padding: 3px 4px 2px 4px;
   border-radius: 13.5px;
   background-color: #333030;
-}
 
-.slide-indicators > label {
-  height: 20px;
-  width: 20px;
-  display: inline-block;
-  border-radius: 50%;
-  background-color: #e3dede;
-  opacity: 0.7;
-  cursor: pointer;
-}
+  > label {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #e3dede;
+    opacity: 0.7;
+    cursor: pointer;
 
-.slide-indicators > label:hover {
-  opacity: 1;
-}
+    &:hover {
+      opacity: 1;
+    }
+  }
 
-.slides input[type="radio"]:nth-of-type(1):checked ~ .slide-indicators > label:first-child,
-.slides input[type="radio"]:nth-of-type(2):checked ~ .slide-indicators > label:nth-child(2),
-.slides input[type="radio"]:nth-of-type(3):checked ~ .slide-indicators > label:nth-child(3),
-.slides input[type="radio"]:nth-of-type(4):checked ~ .slide-indicators > label:last-child {
-  background-color: $projects-primary-color;
-}
-
-.slides::-webkit-scrollbar {
-  width: .625em;
-}
-
-.slides::-webkit-scrollbar-thumb:vertical {
-  border-radius: 5px;
-}
-
-.slides::-webkit-scrollbar-thumb:vertical {
-  box-shadow: inset 0 0 10px $projects-primary-color;
 }
 
 @media screen and (max-width: 600px) {

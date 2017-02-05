@@ -54,6 +54,12 @@ button {
   height: 3rem;
   line-height: normal;
   overflow: visible;
+  outline: none;
   -webkit-appearance: button;
   @include user-select(none);
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
 }

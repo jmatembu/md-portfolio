@@ -3,141 +3,66 @@
 .accordion {
   width: 70%;
   margin: 0 auto;
-}
+  text-align: left;
 
-.accordion h5,
-.accordion h6 {
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-
-.accordion h6:not(:first-child) {
-  margin-top: 1rem;
-}
-
-.accordion li {
-  list-style-type: none;
-}
-
-.accordion > li {
-  border: 1px solid #ce6d39;
-  margin-bottom: 1px;
-}
-
-.accordion input[type="checkbox"] {
-  display: none;
-}
-
-.accordion label {
-  background-color: #ce6d39;
-  cursor: pointer;
-  display: block;
-  padding: 0.625rem 1.25rem;
-  color: #FFF3E0;
-  -webkit-transition: background-color 1s, border 0.5s, color 0.8s;
-  transition: background-color 1s, border 0.5s, color 0.8s;
-}
-
-.accordion label:hover {
-  background-color: #FFF3E0;
-  border-left: 0.625rem solid #ce6d39;
-  color: #000000;
-}
-
-.accordion input[type="checkbox"]:checked + label {
-  background-color: #000000;
-  border-left: 0.625rem solid #ce6d39;
-  color: #FFF3E0;
-}
-
-.accordion input[type="checkbox"]:checked + label:hover {
-  color: #ce6d39;
-}
-
-.accordion .accordion-content {
-  padding: 1.25rem;
-  display: none;
-}
-
-.accordion input[type="checkbox"]:checked + label + .accordion-content {
-  display: block;
-}
-
-@media (max-width: 1024px) {
-  .col12-sm {
-    width: 100%;
+  h5, h6 {
+    margin-top: 0;
+    margin-bottom: 8px;
   }
 
-  .accordion {
-    width: 100%;
+  h6:not(:first-child) {
+    margin-top: 1rem;
   }
-  .accordion > li {
-    border: 1px solid #000000;
-  }
-  .accordion label {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  .accordion label:hover {
-    background-color: #ffffff;
-    border-left: 0.625rem solid #000000;
-    color: #000000;
-  }
-  .accordion input[type="checkbox"]:checked + label {
-    background-color: #000000;
-    border-left: 0.625rem solid #000000;
-    color: #ffffff;
-  }
-  .accordion input[type="checkbox"]:checked + label:hover {
-    color: #e6e6fa;
-  }
-}
 
+  li {
+    list-style-type: none;
+  }
 
-@media screen and (max-width: 600px) {
-  .accordion > li {
-    border: 1px solid #2e8b57;
+  > li {
+    border: 1px solid #ce6d39;
+    margin-bottom: 1px;
   }
-  .accordion label {
-    background-color: #2e8b57;
-    color: #fff;
-  }
-  .accordion label:hover {
-    background-color: #e6e6fa;
-    border-left: 0.625rem solid #2e8b57;
-    color: #000000;
-  }
-  .accordion input[type="checkbox"]:checked + label {
-    background-color: #000000;
-    border-left: 0.625rem solid #2e8b57;
-    color: #e6e6fa;
-  }
-  .accordion input[type="checkbox"]:checked + label:hover {
-    color: #2e8b57;
-  }
-}
 
-@media (max-width: 360px) {
-  .accordion > li {
-    border: 1px solid #87ceeb;
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked {
+      + label {
+        background-color: #000000;
+        border-left: 0.625rem solid #ce6d39;
+        color: #FFF3E0;
+
+        &:hover {
+          color: #ce6d39;
+        }
+
+        + .accordion-content {
+          display: block;
+        }
+      }      
+    }
   }
-  .accordion label {
-    background-color: #87ceeb;
-    color: #fff;
+
+  label {
+    background-color: #ce6d39;
+    cursor: pointer;
+    display: block;
+    padding: 0.625rem 1.25rem;
+    color: #FFF3E0;
+    -webkit-transition: background-color 1s, border 0.5s, color 0.8s;
+    transition: background-color 1s, border 0.5s, color 0.8s;
+
+    &:hover {
+      background-color: #FFF3E0;
+      border-left: 0.625rem solid #ce6d39;
+      color: #000000;
+    }
+
   }
-  .accordion label:hover {
-    background-color: #e6e6fa;
-    border-left: 0.625rem solid #87ceeb;
-    color: #000000;
-  }
-  .accordion input[type="checkbox"]:checked + label {
-    background-color: #000000;
-    border-left: 0.625rem solid #87ceeb;
-    color: #e6e6fa;
-  }
-  .accordion input[type="checkbox"]:checked + label:hover {
-    color: #87ceeb;
+
+  .accordion-content {
+    padding: 1.25rem;
+    display: none;
   }
 
 }
-

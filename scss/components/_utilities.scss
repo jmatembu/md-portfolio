@@ -3,8 +3,7 @@
 .divider {
   background-color: #e3dede;
   display: block;
-  width: 70%;
-  height: 1px;
+  @include box-size(70%, 1px);
   margin: 2rem auto 2rem auto;
 }
 
@@ -22,20 +21,17 @@
   background-color: #FF0000;
   color: #FFFFFF;
   font-size: 1rem;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
+  @include transition(0.3);
 
-.error.active {
-  padding: 0.625rem;
-  margin-bottom: 0.625rem;
-  display: block;
+  &.active {
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+    display: block;
+  }
 }
 
 .hidden {
   display: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 .left {
   float: right;

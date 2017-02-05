@@ -4,9 +4,102 @@
   -ms-user-select: none;
   user-select: none;
 }
+@mixin transform($prop) {
+  -webkit-transform: $prop;
+          transform: $prop;
+}
+@mixin transform-with-origin($transform, $origin) {
+  -webkit-transform: $transform;
+          transform: $transform;
+  transform-origin: $origin;
+}
+@mixin transition($speed) {
+  -webkit-transition: $speed + 's';
+          transition: $speed + 's';
+}
 @mixin grid-item-transition($deg, $origin, $transform-speed, $opacity-speed, $opacity-delay) {
   transform: rotateY($deg);
   opacity: 1;
   transform-origin: $origin;
   transition: transform $transform-speed ease-out, opacity $opacity-speed $opacity-delay;
+}
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin flex($num) {
+  -webkit-box-flex: $num;
+          -ms-flex: $num;
+              flex: $num;
+}
+@mixin flex-flow($direction, $wrap) {
+  -ms-flex-flow: $direction $wrap;
+      flex-flow: $direction $wrap;
+}
+@mixin flex-direction($default, $webkit, $webkit-box) {
+  -webkit-box-orient: $webkit-box;
+  -webkit-box-direction: $webkit;
+      -ms-flex-direction: $default;
+          flex-direction: $default;
+}
+@mixin flex-wrap($value) {
+  -ms-flex-wrap: $value;
+      flex-wrap: $value;
+}
+@mixin justify-content($default, $browser) {
+  -webkit-box-pack: $browser;
+     -ms-flex-pack: $browser;
+        justify-content: $default;
+}
+@mixin align-items($default, $browser) {
+  -webkit-box-align: $browser;
+      -ms-flex-align: $browser;
+          align-items: $default;
+}
+@mixin flex-grow($num) {
+  -webkit-box-flex: $num;
+  -ms-flex-positive: $num;
+          flex-grow: $num;
+}
+@mixin position-top($type, $top) {
+  position: $type;
+  top: $top;
+}
+@mixin position-top-left($type, $top, $left) {
+  position: $type;
+  top: $top;
+  left: $left;
+}
+@mixin position-top-right($type, $top, $right) {
+  position: $type;
+  top: $top;
+  right: $right;
+}
+@mixin absolute-top-left($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+@mixin absolute-top-right($top, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+@mixin absolute-bottom-right($bottom, $right) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
+}
+@mixin absolute-right($right) {
+  position: absolute;
+  right: $right;
+}
+@mixin absolute-left($left) {
+  position: absolute;
+  left: $left;
+}
+@mixin box-size($width, $height) {
+  width: $width;
+  height: $height;
 }

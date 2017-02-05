@@ -5,6 +5,15 @@
   color: $projects-primary-color;
 }
 
+.slide .galler {
+  text-align: left;
+}
+@media screen and (min-width: 1024px) {
+	.accordion {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 600px) {    
   .fa-arrow-right {
     display: none;
