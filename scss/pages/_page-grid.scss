@@ -108,6 +108,25 @@ main {
   @include justify-content(center, center);
 }
 
+.greeting {
+  box-shadow: -7px 0 23px -4px grey;
+  padding: 2em;
+  position: absolute;
+  left: -50%;
+  top: 20vh;
+  text-align: center;
+  transition: left .3s ease-in-out;
+
+  &.reveal {
+    left: 0;
+  }
+
+  p > span {
+    display: block;
+    font-size: 2em;
+  }
+}
+
 .meta-link {
   font-size: 2em;
 }

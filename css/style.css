@@ -390,6 +390,20 @@ main {
   -ms-flex-pack: center;
   justify-content: center; }
 
+.greeting {
+  box-shadow: -7px 0 23px -4px grey;
+  padding: 2em;
+  position: absolute;
+  left: -50%;
+  top: 20vh;
+  text-align: center;
+  transition: left .3s ease-in-out; }
+  .greeting.reveal {
+    left: 0; }
+  .greeting p > span {
+    display: block;
+    font-size: 2em; }
+
 .meta-link {
   font-size: 2em; }
 
