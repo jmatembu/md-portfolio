@@ -390,6 +390,9 @@ main {
   -ms-flex-pack: center;
   justify-content: center; }
 
+.meta-link {
+  font-size: 2em; }
+
 .loader {
   margin: .625rem auto;
   position: relative;
