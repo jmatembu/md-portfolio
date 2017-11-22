@@ -1,0 +1,45 @@
+{
+  "name": "jmm-portfolio",
+  "version": "1.0.0",
+  "description": "Joseph Michael Matembu's Portfolio",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-csslint": "^1.0.0",
+    "gulp-eslint": "^4.0.0",
+    "gulp-html-validator": "^0.0.5",
+    "gulp-jslint": "^1.0.10"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp-concat": "^2.6.1",
+    "gulp-image": "^4.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-stylelint": "^5.0.0",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^1.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmatembu/md-portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "css",
+    "javascript",
+    "html",
+    "sass",
+    "frontend",
+    "developer"
+  ],
+  "author": "Joseph M. Matembu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmatembu/md-portfolio/issues"
+  },
+  "homepage": "https://github.com/jmatembu/md-portfolio#readme"
+}
