@@ -1,27 +1,33 @@
 {
   "name": "jmm-portfolio",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "description": "Joseph Michael Matembu's Portfolio",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-csslint": "^1.0.0",
-    "gulp-eslint": "^4.0.0",
-    "gulp-html-validator": "^0.0.5",
-    "gulp-jslint": "^1.0.10"
+    "gulp-bump": "^2.8.0",
+    "gulp-git": "^2.4.2"
   },
   "devDependencies": {
     "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
+    "gulp-csslint": "^1.0.0",
+    "gulp-eslint": "^4.0.0",
+    "gulp-html-validator": "^0.0.5",
     "gulp-image": "^4.1.0",
+    "gulp-jasmine": "^2.4.2",
+    "gulp-jslint": "^1.0.10",
+    "gulp-postcss": "^7.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-stylelint": "^5.0.0",
     "gulp-uglify": "^3.0.0",
+    "jasmine": "^2.8.0",
     "pump": "^1.0.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",

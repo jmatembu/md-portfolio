@@ -4,3 +4,5 @@ c
 md-portfolio.sublime-project
 md-portfolio.sublime-workspace
 node_modules
+lib
+spec

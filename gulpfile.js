@@ -8,7 +8,11 @@ const gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	pump = require('pump'),
 	image = require('gulp-image'),
-	browserSync = require('browser-sync').create();
+	browserSync = require('browser-sync').create(),
+	autoprefixer = require('gulp-autoprefixer'),
+	bump = require('gulp-bump'),
+	git = require('gulp-git'),
+	jasmine = require('gulp-jasmine');
 
 
 // Compile SASS files
@@ -73,16 +77,20 @@ gulp.task('js-lint', () => {
  		.pipe(gulp.dest('js'));
  });
 
- gulp.task('styles', () => {
+gulp.task('styles', () => {
  	return gulp.src([
  			'css/style.css',
  			'css/portfolio.css',
  			'css/calculator.css',
  			'css/card.css'
  		])
+		.pipe(autoprefixer({
+			browsers: ['last 5 versions'],
+			cascade: false
+		}))
  		.pipe(concat('app.css'))
  		.pipe(gulp.dest('css'));
- });
+});
 
 gulp.task('minify-css', ['styles'], () => {
  	return gulp.src('css/app.css')
@@ -116,6 +124,17 @@ gulp.task('watch', () => {
 	gulp.watch('css/app.css', ['css-lint']);
 });
 
+gulp.task('version', () => {
+  gulp.src(['./package.json'])
+  .pipe(bump({type:'patch'}))
+  .pipe(gulp.dest('./'));
+});
+
+gulp.task('deploy', function(){
+  git.push('origin', 'master', function (err) {
+    if (err) throw err;
+  });
+});
 
 // Main tasks to run in the terminal
 gulp.task('serve', ['minify-css'], () => {
@@ -130,8 +149,17 @@ gulp.task('serve', ['minify-css'], () => {
 });
 
 gulp.task('default', ['dev']);
+
 gulp.task('dev', ['html-lint', 'scripts', 'styles', 'watch']);
+
+// gulp.task('test', () =>
+//     gulp.src('spec/jasmine_examples/PlayerSpec.js')
+//         .pipe(jasmine())
+// );
+
 gulp.task('prod', ['minify-css', 'minify-js', 'image']);
+
+gulp.task('deploy', ['version', 'deploy']);
 
 
 /*
